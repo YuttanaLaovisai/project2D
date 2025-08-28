@@ -1,0 +1,135 @@
+[gd_scene load_steps=19 format=3 uid="uid://84wow1sehlel"]
+
+[ext_resource type="Script" uid="uid://cn36uw1apb1ho" path="res://scripts/player.gd" id="1_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://ccwrvk05g01qe" path="res://asset/template-spritesheet-front.png" id="2_dqkch"]
+[ext_resource type="Texture2D" uid="uid://do5f8ekivuwnb" path="res://asset/template-spritesheet-rear.png" id="3_qlg0r"]
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="4_dqkch"]
+[ext_resource type="AudioStream" path="res://FootstepSounds/Footstep_Left_Grass.ogg" id="5_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://cg6qunhgvonlk" path="res://asset/pixil-frame-0 (19).png" id="6_tuyoq"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qhqgy"]
+friction = 0.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
+atlas = ExtResource("2_dqkch")
+region = Rect2(0, 648, 140, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
+atlas = ExtResource("2_dqkch")
+region = Rect2(140, 648, 140, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
+atlas = ExtResource("2_dqkch")
+region = Rect2(280, 648, 140, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ur7pv"]
+atlas = ExtResource("2_dqkch")
+region = Rect2(420, 648, 140, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
+atlas = ExtResource("2_dqkch")
+region = Rect2(0, 0, 168, 198)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4r1p"]
+atlas = ExtResource("3_qlg0r")
+region = Rect2(0, 648, 140, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2wvv"]
+atlas = ExtResource("3_qlg0r")
+region = Rect2(140, 648, 140, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3v2ag"]
+atlas = ExtResource("3_qlg0r")
+region = Rect2(280, 648, 140, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jej6c"]
+atlas = ExtResource("3_qlg0r")
+region = Rect2(420, 648, 140, 162)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f1ej7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuyoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjrip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smehm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ur7pv")
+}],
+"loop": true,
+"name": &"down",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhqgy")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4r1p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2wvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3v2ag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jej6c")
+}],
+"loop": true,
+"name": &"up",
+"speed": 12.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qhqgy"]
+radius = 23.0
+height = 126.0
+
+[node name="player" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_qhqgy")
+gravity_scale = 0.0
+lock_rotation = true
+script = ExtResource("1_qhqgy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_f1ej7")
+animation = &"idle"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 8)
+shape = SubResource("CapsuleShape2D_qhqgy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Virtual Joystick" parent="CanvasLayer" instance=ExtResource("4_dqkch")]
+offset_left = 103.0
+offset_top = -395.0
+offset_right = 403.0
+offset_bottom = -95.0
+deadzone_size = 50.0
+
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_qlg0r")
+pitch_scale = 1.75
+autoplay = true
+parameters/looping = true
+
+[node name="egg" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(3, -86)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("6_tuyoq")

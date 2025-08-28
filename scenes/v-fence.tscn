@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://m78jb11qm2b6"]
+
+[ext_resource type="Texture2D" uid="uid://bs73sw85mv30u" path="res://asset/v-fence.png" id="1_56by2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lyuvo"]
+size = Vector2(25, 159)
+
+[node name="v-fence" type="StaticBody2D"]
+
+[node name="V-fence" type="Sprite2D" parent="." groups=["navigation"]]
+scale = Vector2(2, 2)
+texture = ExtResource("1_56by2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-12.5, -0.5)
+shape = SubResource("RectangleShape2D_lyuvo")

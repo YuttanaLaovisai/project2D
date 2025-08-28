@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmd2otrm32d65"]
+
+[ext_resource type="Script" uid="uid://dehywualn3ecs" path="res://scripts/egg.gd" id="1_qlus4"]
+[ext_resource type="Texture2D" uid="uid://dj84p1nkiugh2" path="res://asset/pixil-frame-0 (1).png" id="2_34461"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ifgqj"]
+size = Vector2(84, 41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qlus4"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+anti_aliasing = false
+anti_aliasing_size = 0.453
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_34461"]
+bg_color = Color(0.0962047, 0.0962048, 0.0962047, 1)
+
+[node name="egg" type="Area2D"]
+script = ExtResource("1_qlus4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4.5)
+shape = SubResource("RectangleShape2D_ifgqj")
+
+[node name="egg" type="Sprite2D" parent="."]
+texture = ExtResource("2_34461")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+visible = false
+offset_left = 165.0
+offset_top = -159.0
+offset_right = 323.0
+offset_bottom = -151.0
+theme_override_styles/background = SubResource("StyleBoxFlat_qlus4")
+theme_override_styles/fill = SubResource("StyleBoxFlat_34461")
+max_value = 3.0
+show_percentage = false
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

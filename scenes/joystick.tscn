@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://m430sgou2ng1"]
+
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="3_m03u7"]
+
+[node name="Joystick" type="Control"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 300.0
+offset_bottom = 300.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Virtual Joystick" parent="CanvasLayer" instance=ExtResource("3_m03u7")]

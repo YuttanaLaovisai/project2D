@@ -1,0 +1,175 @@
+[gd_scene load_steps=13 format=3 uid="uid://bhqyo7ijnrnhs"]
+
+[ext_resource type="Texture2D" uid="uid://ckpy7mp3nxla5" path="res://asset/pixil-frame-0 (2).png" id="1_bodal"]
+[ext_resource type="Script" uid="uid://o8y8mxu2mtta" path="res://scripts/start.gd" id="1_y16t7"]
+[ext_resource type="Texture2D" uid="uid://b05ix2jisc6i" path="res://asset/idle.png" id="2_kdmts"]
+[ext_resource type="Texture2D" uid="uid://dj84p1nkiugh2" path="res://asset/pixil-frame-0 (1).png" id="3_0auqf"]
+[ext_resource type="FontFile" path="res://font/FantasticBoogaloo-GDlq.ttf" id="4_0auqf"]
+[ext_resource type="Texture2D" uid="uid://bjfdphrwhf0wp" path="res://asset/grass.png" id="4_kdmts"]
+[ext_resource type="Texture2D" uid="uid://d3xeo8nagtbmp" path="res://asset/pixil-frame-0 (17).png" id="7_8itgj"]
+[ext_resource type="Texture2D" uid="uid://cxjai7kso8u61" path="res://asset/pixil-frame-0 (16).png" id="8_tn317"]
+[ext_resource type="Texture2D" uid="uid://bjgm76scyiyyy" path="res://asset/pixil-frame-0 (21).png" id="9_m8nf6"]
+[ext_resource type="AudioStream" uid="uid://b151inq0wq3ae" path="res://asset/btnSound.mp3" id="9_tn317"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0auqf"]
+texture = ExtResource("4_kdmts")
+2:2/0 = 0
+3:2/0 = 0
+3:3/0 = 0
+2:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_y16t7"]
+sources/0 = SubResource("TileSetAtlasSource_0auqf")
+
+[node name="start" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y16t7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pixil-frame-0(2)" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(965.25, 569.016)
+scale = Vector2(21.335, 12.2603)
+texture = ExtResource("1_bodal")
+
+[node name="Idle" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(960, 228)
+scale = Vector2(2, 2)
+texture = ExtResource("2_kdmts")
+
+[node name="Pixil-frame-0(1)" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(960, 364)
+scale = Vector2(2, 2)
+texture = ExtResource("3_0auqf")
+
+[node name="TileMap" type="TileMap" parent="CanvasLayer"]
+tile_set = SubResource("TileSet_y16t7")
+format = 2
+layer_0/tile_data = PackedInt32Array(1900549, 131072, 2, 1966085, 131072, 3, 1900550, 196608, 2, 1966086, 196608, 3, 1835024, 131072, 2, 1900560, 131072, 3, 1835025, 196608, 2, 1900561, 196608, 3, 786449, 131072, 2, 851985, 131072, 3, 786450, 196608, 2, 851986, 196608, 3, 852016, 131072, 2, 917552, 131072, 3, 852017, 196608, 2, 917553, 196608, 3, 2097198, 131072, 2, 2162734, 131072, 3, 2097199, 196608, 2, 2162735, 196608, 3, 1703964, 131072, 2, 1769500, 131072, 3, 1703965, 196608, 2, 1769501, 196608, 3, 720928, 131072, 2, 786464, 131072, 3, 720929, 196608, 2, 786465, 196608, 3, 1966140, 131072, 2, 2031676, 131072, 3, 1966141, 196608, 2, 2031677, 196608, 3, 2293814, 131072, 2, 2359350, 131072, 3, 2293815, 196608, 2, 2359351, 196608, 3, 2293779, 131072, 2, 2359315, 131072, 3, 2293780, 196608, 2, 2359316, 196608, 3, 2293777, 131072, 2, 2359313, 131072, 3, 2293778, 196608, 2, 2359314, 196608, 3, 983044, 131072, 2, 1048580, 131072, 3, 983045, 196608, 2, 1048581, 196608, 3, 393222, 131072, 2, 458758, 131072, 3, 393223, 196608, 2, 458759, 196608, 3, 327738, 131072, 2, 393274, 131072, 3, 327739, 196608, 2, 393275, 196608, 3, 131135, 131072, 2, 196671, 131072, 3, 131136, 196608, 2, 196672, 196608, 3, 1179715, 131072, 2, 1245251, 131072, 3, 1179716, 196608, 2, 1245252, 196608, 3, 2031685, 131072, 2, 2097221, 131072, 3, 2031686, 196608, 2, 2097222, 196608, 3, 2424898, 131072, 2, 2490434, 131072, 3, 2424899, 196608, 2, 2490435, 196608, 3, 2490370, 131072, 2, 2555906, 131072, 3, 2490371, 196608, 2, 2555907, 196608, 3, 327707, 131072, 2, 393243, 131072, 3, 327708, 196608, 2, 393244, 196608, 3, 3276833, 131072, 2, 3342369, 131072, 3, 3276834, 196608, 2, 3342370, 196608, 3, 2818099, 131072, 2, 2883635, 131072, 3, 2818100, 196608, 2, 2883636, 196608, 3, 2424870, 131072, 2, 2490406, 131072, 3, 2424871, 196608, 2, 2490407, 196608, 3, 2687007, 131072, 2, 2752543, 131072, 3, 2687008, 196608, 2, 2752544, 196608, 3, 3276818, 131072, 2, 3342354, 131072, 3, 3276819, 196608, 2, 3342355, 196608, 3, 3080203, 131072, 2, 3145739, 131072, 3, 3080204, 196608, 2, 3145740, 196608, 3, 2949148, 131072, 2, 3014684, 131072, 3, 2949149, 196608, 2, 3014685, 196608, 3, 3670032, 131072, 2, 3735568, 131072, 3, 3670033, 196608, 2, 3735569, 196608, 3, 3801106, 131072, 2, 3866642, 131072, 3, 3801107, 196608, 2, 3866643, 196608, 3, 3735594, 131072, 2, 3801130, 131072, 3, 3735595, 196608, 2, 3801131, 196608, 3, 4194313, 131072, 2, 4259849, 131072, 3, 4194314, 196608, 2, 4259850, 196608, 3, 3538950, 131072, 2, 3604486, 131072, 3, 3538951, 196608, 2, 3604487, 196608, 3, 3407878, 131072, 2, 3473414, 131072, 3, 3407879, 196608, 2, 3473415, 196608, 3, 3342407, 131072, 2, 3407943, 131072, 3, 3342408, 196608, 2, 3407944, 196608, 3, 3539047, 131072, 2, 3604583, 131072, 3, 3539048, 196608, 2, 3604584, 196608, 3, 3407975, 131072, 2, 3473511, 131072, 3, 3407976, 196608, 2, 3473512, 196608, 3, 2097251, 131072, 2, 2162787, 131072, 3, 2097252, 196608, 2, 2162788, 196608, 3, 1966179, 131072, 2, 2031715, 131072, 3, 1966180, 196608, 2, 2031716, 196608, 3, 1114201, 131072, 2, 1179737, 131072, 3, 1114202, 196608, 2, 1179738, 196608, 3, 786538, 131072, 2, 852074, 131072, 3, 786539, 196608, 2, 852075, 196608, 3, 458865, 131072, 2, 524401, 131072, 3, 458866, 196608, 2, 524402, 196608, 3, 4128884, 131072, 2, 4194420, 131072, 3, 4128885, 196608, 2, 4194421, 196608, 3, 3866741, 131072, 2, 3932277, 131072, 3, 3866742, 196608, 2, 3932278, 196608, 3, 2949237, 131072, 2, 3014773, 131072, 3, 2949238, 196608, 2, 3014774, 196608, 3, 2818165, 131072, 2, 2883701, 131072, 3, 2818166, 196608, 2, 2883702, 196608, 3, 2359410, 131072, 2, 2424946, 131072, 3, 2359411, 196608, 2, 2424947, 196608, 3, 2359408, 131072, 2, 2424944, 131072, 3, 2359409, 196608, 2, 2424945, 196608, 3, 3145826, 131072, 2, 3211362, 131072, 3, 3145827, 196608, 2, 3211363, 196608, 3, 3211339, 131072, 2, 3276875, 131072, 3, 3211340, 196608, 2, 3276876, 196608, 3, 3735627, 131072, 2, 3801163, 131072, 3, 3735628, 196608, 2, 3801164, 196608, 3, 3801182, 131072, 2, 3866718, 131072, 3, 3801183, 196608, 2, 3866719, 196608, 3, 4259927, 131072, 2, 4325463, 131072, 3, 4259928, 196608, 2, 4325464, 196608, 3, 4063291, 131072, 2, 4128827, 131072, 3, 4063292, 196608, 2, 4128828, 196608, 3, 3604538, 131072, 2, 3670074, 131072, 3, 3604539, 196608, 2, 3670075, 196608, 3, 2359375, 131072, 2, 2424911, 131072, 3, 2359376, 196608, 2, 2424912, 196608, 3, 1966167, 131072, 2, 2031703, 131072, 3, 1966168, 196608, 2, 2031704, 196608, 3, 3539032, 131072, 2, 3604568, 131072, 3, 3539033, 196608, 2, 3604569, 196608, 3, 458835, 131072, 2, 524371, 131072, 3, 458836, 196608, 2, 524372, 196608, 3, 1376371, 131072, 2, 1441907, 131072, 3, 1376372, 196608, 2, 1441908, 196608, 3, 4128792, 131072, 2, 4194328, 131072, 3, 4128793, 196608, 2, 4194329, 196608, 3)
+
+[node name="exit" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = 292.0
+offset_right = 154.0
+offset_bottom = 380.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_0auqf")
+theme_override_font_sizes/font_size = 40
+theme_override_icons/icon = ExtResource("7_8itgj")
+text = "Exit"
+flat = true
+icon_alignment = 1
+
+[node name="Endless mode" type="Button" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.471
+anchor_top = 0.5
+anchor_right = 0.471
+anchor_bottom = 0.5
+offset_left = -98.32
+offset_top = -44.0
+offset_right = 209.68
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_0auqf")
+theme_override_font_sizes/font_size = 36
+theme_override_icons/icon = ExtResource("8_tn317")
+text = "Endless "
+flat = true
+icon_alignment = 1
+
+[node name="hard" type="Button" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 184.0
+offset_top = -44.0
+offset_right = 492.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_0auqf")
+theme_override_font_sizes/font_size = 51
+theme_override_icons/icon = ExtResource("9_m8nf6")
+text = "***"
+flat = true
+icon_alignment = 1
+
+[node name="medium" type="Button" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 184.0
+offset_top = 44.0
+offset_right = 492.0
+offset_bottom = 132.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_0auqf")
+theme_override_font_sizes/font_size = 51
+theme_override_icons/icon = ExtResource("9_m8nf6")
+text = "**"
+flat = true
+icon_alignment = 1
+
+[node name="Easy" type="Button" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 184.0
+offset_top = 132.0
+offset_right = 492.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_0auqf")
+theme_override_font_sizes/font_size = 51
+theme_override_icons/icon = ExtResource("9_m8nf6")
+text = "*
+"
+flat = true
+icon_alignment = 1
+
+[node name="btnSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_tn317")
+volume_db = 10.0
+
+[connection signal="pressed" from="CanvasLayer/exit" to="." method="_on_normal_mode_pressed"]
+[connection signal="pressed" from="CanvasLayer/Endless mode" to="." method="_on_endless_mode_pressed"]
+[connection signal="pressed" from="CanvasLayer/hard" to="." method="_on_hard_pressed"]
+[connection signal="pressed" from="CanvasLayer/medium" to="." method="_on_medium_pressed"]
+[connection signal="pressed" from="CanvasLayer/Easy" to="." method="_on_easy_pressed"]
