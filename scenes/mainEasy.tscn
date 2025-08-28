@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cu5ah88kw0251" path="res://scripts/main.gd" id="1_asq8m"]
 [ext_resource type="Texture2D" uid="uid://ckpy7mp3nxla5" path="res://asset/pixil-frame-0 (2).png" id="2_ew3dr"]
 [ext_resource type="Texture2D" uid="uid://bxhtvcp8cg3d2" path="res://asset/pixil-frame-0 (11).png" id="3_yr2yw"]
-[ext_resource type="FontFile" path="res://font/FantasticBoogaloo-GDlq.ttf" id="4_n4bqh"]
+[ext_resource type="FontFile" uid="uid://cys33ha6e3rft" path="res://font/FantasticBoogaloo-GDlq.ttf" id="4_n4bqh"]
 [ext_resource type="PackedScene" uid="uid://bmd2otrm32d65" path="res://scenes/egg.tscn" id="5_0pnme"]
 [ext_resource type="Texture2D" uid="uid://bjfdphrwhf0wp" path="res://asset/grass.png" id="6_cwnkb"]
 [ext_resource type="PackedScene" uid="uid://xut8w1echw2b" path="res://scenes/chicken.tscn" id="7_8crin"]

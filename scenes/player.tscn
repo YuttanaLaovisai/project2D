@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ccwrvk05g01qe" path="res://asset/template-spritesheet-front.png" id="2_dqkch"]
 [ext_resource type="Texture2D" uid="uid://do5f8ekivuwnb" path="res://asset/template-spritesheet-rear.png" id="3_qlg0r"]
 [ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="4_dqkch"]
-[ext_resource type="AudioStream" path="res://FootstepSounds/Footstep_Left_Grass.ogg" id="5_qlg0r"]
+[ext_resource type="AudioStream" uid="uid://crxpwvr21o56u" path="res://FootstepSounds/Footstep_Left_Grass.ogg" id="5_qlg0r"]
 [ext_resource type="Texture2D" uid="uid://cg6qunhgvonlk" path="res://asset/pixil-frame-0 (19).png" id="6_tuyoq"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qhqgy"]
