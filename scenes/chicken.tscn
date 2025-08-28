@@ -1,11 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://xut8w1echw2b"]
+[gd_scene load_steps=5 format=3 uid="uid://xut8w1echw2b"]
 
-[ext_resource type="Texture2D" uid="uid://b05ix2jisc6i" path="res://asset/idle.png" id="1_nutj5"]
 [ext_resource type="Script" uid="uid://d1r268mnnw5us" path="res://scripts/chicken.gd" id="1_rc7ma"]
-[ext_resource type="Texture2D" uid="uid://d4d4ptw3cuafy" path="res://asset/run1.png" id="2_rc7ma"]
-[ext_resource type="Texture2D" uid="uid://cv2whdxae21w1" path="res://asset/run2.png" id="3_0du8g"]
-[ext_resource type="AudioStream" path="res://FootstepSounds/rubber-chicken-96436.mp3" id="5_0du8g"]
-[ext_resource type="AudioStream" path="res://FootstepSounds/chicken-cluking-type-2-293319.mp3" id="6_bti8l"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bti8l"]
 radius = 21.0238
@@ -14,7 +9,7 @@ radius = 21.0238
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_nutj5")
+"texture": null
 }],
 "loop": true,
 "name": &"idle",
@@ -22,10 +17,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_rc7ma")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_0du8g")
+"texture": null
 }],
 "loop": true,
 "name": &"run",
@@ -56,11 +51,7 @@ shape = SubResource("CircleShape2D_0du8g")
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_0du8g")
-parameters/looping = true
 
 [node name="idlesound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("6_bti8l")
-parameters/looping = true
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
