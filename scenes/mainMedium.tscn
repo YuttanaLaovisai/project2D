@@ -1,7 +1,7 @@
 [gd_scene load_steps=24 format=3 uid="uid://cnw477npctas1"]
 
 [ext_resource type="Script" uid="uid://cu5ah88kw0251" path="res://scripts/main.gd" id="1_506rx"]
-[ext_resource type="Texture2D" uid="uid://ckpy7mp3nxla5" path="res://asset/pixil-frame-0 (2).png" id="2_fa5lm"]
+[ext_resource type="Texture2D" uid="uid://qsse861iocvd" path="res://asset/pixil-frame-0 (2).png" id="2_fa5lm"]
 [ext_resource type="Texture2D" uid="uid://bxhtvcp8cg3d2" path="res://asset/pixil-frame-0 (11).png" id="3_kmegv"]
 [ext_resource type="FontFile" uid="uid://cys33ha6e3rft" path="res://font/FantasticBoogaloo-GDlq.ttf" id="4_qw58y"]
 [ext_resource type="PackedScene" uid="uid://bmd2otrm32d65" path="res://scenes/egg.tscn" id="5_wbtp2"]
@@ -9,10 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://xut8w1echw2b" path="res://scenes/chicken.tscn" id="7_e8gnh"]
 [ext_resource type="PackedScene" uid="uid://84wow1sehlel" path="res://scenes/player.tscn" id="8_sqrtv"]
 [ext_resource type="Texture2D" uid="uid://d27uw33bkpdef" path="res://asset/pixil-frame-0 (15).png" id="9_o7y6g"]
-[ext_resource type="Texture2D" uid="uid://bs73sw85mv30u" path="res://asset/v-fence.png" id="10_l6fdm"]
+[ext_resource type="Texture2D" uid="uid://dsguv2bs84b0r" path="res://asset/v-fence.png" id="10_l6fdm"]
 [ext_resource type="Texture2D" uid="uid://ccalwvfxkgi5q" path="res://asset/fence.png" id="11_yk6xy"]
 [ext_resource type="Texture2D" uid="uid://8tbfs7mvq28q" path="res://asset/pixil-frame-0 (10).png" id="12_sdcih"]
-[ext_resource type="Texture2D" uid="uid://bh058aqu7q5gx" path="res://asset/pixil-frame-0 (18).png" id="13_4lcnx"]
+[ext_resource type="Texture2D" uid="uid://ca4mvki84v4kg" path="res://asset/pixil-frame-0 (18).png" id="13_4lcnx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_trceg"]
 texture = ExtResource("6_khjvs")

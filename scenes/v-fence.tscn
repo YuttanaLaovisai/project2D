@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://m78jb11qm2b6"]
 
-[ext_resource type="Texture2D" uid="uid://bs73sw85mv30u" path="res://asset/v-fence.png" id="1_56by2"]
+[ext_resource type="Texture2D" uid="uid://dsguv2bs84b0r" path="res://asset/v-fence.png" id="1_56by2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lyuvo"]
 size = Vector2(25, 159)

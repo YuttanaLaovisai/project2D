@@ -8,6 +8,7 @@ func _ready() -> void:
 	$CanvasLayer/exit.focus_mode = Control.FOCUS_NONE
 	$CanvasLayer/Easy.focus_mode = Control.FOCUS_NONE
 	$CanvasLayer/medium.focus_mode = Control.FOCUS_NONE
+	$CanvasLayer/hard.focus_mode = Control.FOCUS_NONE
 	$CanvasLayer/Easy.visible = false
 	$CanvasLayer/medium.visible = false
 	$CanvasLayer/hard.visible = false
