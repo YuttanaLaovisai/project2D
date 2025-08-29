@@ -4,9 +4,11 @@ extends Node2D
 @onready var chicken = $chicken
 @onready var egg = $egg
 @onready var time_label = $CanvasLayer/Label
+@onready var highesttime_label = $CanvasLayer/Label2
 @onready var eggg = $player/egg
 
 var is_holding_egg := false
+var highest_time := 0.0
 var hold_time := 0.0
 var game_over := false 
 var exit_area = false
@@ -40,6 +42,10 @@ func _on_egg_stolen() -> void:
 
 func _on_player_caught() -> void:
 	game_over = true
+	if highest_time < hold_time:
+		highest_time = hold_time
+		var s = "%.2f"%hold_time
+		highesttime_label.text = "Highest Hold Egg Time: " + str(s)
 
 
 func _on_back_pressed() -> void:
