@@ -18,7 +18,6 @@ func _ready():
 func _physics_process(delta: float) -> void:
 	if not $idlesound.playing and not chase:
 		$idlesound.play()
-
 	if chase and target:
 		agent.target_position = target.global_position
 		
@@ -31,6 +30,7 @@ func _physics_process(delta: float) -> void:
 			$AudioStreamPlayer2D.stop()
 		if not $idlesound.playing:
 			$idlesound.play()
+		global_position = home_position
 
 	if agent.is_navigation_finished():
 		velocity = Vector2.ZERO
@@ -55,4 +55,5 @@ func _physics_process(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		chase = false
+		print(speed)
 		emit_signal("player_caught")

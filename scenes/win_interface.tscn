@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://3xsov5deie5k"]
+
+[ext_resource type="Script" uid="uid://bea3kaj48p28k" path="res://scripts/win_interface.gd" id="1_i27u1"]
+[ext_resource type="Texture2D" uid="uid://ce08wbwo7wabg" path="res://asset/pixil-frame-0 (24).png" id="1_sq4ju"]
+[ext_resource type="FontFile" uid="uid://cys33ha6e3rft" path="res://font/FantasticBoogaloo-GDlq.ttf" id="3_dvimv"]
+[ext_resource type="Texture2D" uid="uid://8tbfs7mvq28q" path="res://asset/pixil-frame-0 (10).png" id="4_tmsw5"]
+
+[node name="win_interface" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i27u1")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="win" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(969, 514)
+texture = ExtResource("1_sq4ju")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -238.5
+offset_top = -287.0
+offset_right = 238.5
+offset_bottom = -240.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_dvimv")
+theme_override_font_sizes/font_size = 45
+text = "Mission Egg-complished!"
+
+[node name="back" type="Button" parent="CanvasLayer"]
+offset_left = 647.0
+offset_top = 669.0
+offset_right = 776.0
+offset_bottom = 739.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_dvimv")
+theme_override_font_sizes/font_size = 61
+text = "Back"
+flat = true
+
+[node name="next" type="Button" parent="CanvasLayer"]
+offset_left = 1224.0
+offset_top = 747.0
+offset_right = 1332.0
+offset_bottom = 855.0
+rotation = 3.14159
+icon = ExtResource("4_tmsw5")
+flat = true
+
+[connection signal="pressed" from="CanvasLayer/back" to="." method="_on_back_pressed"]

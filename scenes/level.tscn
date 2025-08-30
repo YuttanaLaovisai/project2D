@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3 uid="uid://cysovksogtvrg"]
+
+[ext_resource type="Script" uid="uid://d3r702dah7upw" path="res://scripts/level.gd" id="1_mx8sn"]
+[ext_resource type="Texture2D" uid="uid://qsse861iocvd" path="res://asset/pixil-frame-0 (2).png" id="2_ppgk2"]
+[ext_resource type="FontFile" uid="uid://cys33ha6e3rft" path="res://font/FantasticBoogaloo-GDlq.ttf" id="3_2r41h"]
+[ext_resource type="Texture2D" uid="uid://dyj7u3a11bdp2" path="res://asset/pixil-frame-0 (23).png" id="4_klq6b"]
+[ext_resource type="Texture2D" uid="uid://8tbfs7mvq28q" path="res://asset/pixil-frame-0 (10).png" id="5_ppgk2"]
+
+[node name="level" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mx8sn")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pixil-frame-0(2)" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(957, 565)
+scale = Vector2(26.82, 15.5)
+texture = ExtResource("2_ppgk2")
+
+[node name="lvl1" type="Button" parent="CanvasLayer"]
+offset_left = 65.0
+offset_top = 152.0
+offset_right = 223.0
+offset_bottom = 310.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_2r41h")
+theme_override_font_sizes/font_size = 85
+text = "1"
+icon = ExtResource("4_klq6b")
+flat = true
+icon_alignment = 1
+
+[node name="Normal mode" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -191.0
+offset_right = 191.0
+offset_bottom = 66.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_2r41h")
+theme_override_font_sizes/font_size = 65
+text = "Normal mode"
+
+[node name="back" type="Button" parent="CanvasLayer"]
+offset_right = 8.0
+offset_bottom = 8.0
+icon = ExtResource("5_ppgk2")
+flat = true
+
+[connection signal="pressed" from="CanvasLayer/lvl1" to="." method="_on_lvl_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/back" to="." method="_on_back_pressed"]

@@ -100,6 +100,29 @@ text = "Endless "
 flat = true
 icon_alignment = 1
 
+[node name="normal" type="Button" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.471
+anchor_top = 0.5
+anchor_right = 0.471
+anchor_bottom = 0.5
+offset_left = -98.32
+offset_top = 61.0
+offset_right = 209.68
+offset_bottom = 149.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_0auqf")
+theme_override_font_sizes/font_size = 36
+theme_override_icons/icon = ExtResource("9_1nvso")
+text = "Normal
+"
+flat = true
+icon_alignment = 1
+
 [node name="hard" type="Button" parent="CanvasLayer"]
 visible = false
 anchors_preset = 8
@@ -174,6 +197,7 @@ volume_db = 10.0
 
 [connection signal="pressed" from="CanvasLayer/exit" to="." method="_on_normal_mode_pressed"]
 [connection signal="pressed" from="CanvasLayer/Endless mode" to="." method="_on_endless_mode_pressed"]
+[connection signal="pressed" from="CanvasLayer/normal" to="." method="_on_lvl_1_pressed"]
 [connection signal="pressed" from="CanvasLayer/hard" to="." method="_on_hard_pressed"]
 [connection signal="pressed" from="CanvasLayer/medium" to="." method="_on_medium_pressed"]
 [connection signal="pressed" from="CanvasLayer/Easy" to="." method="_on_easy_pressed"]

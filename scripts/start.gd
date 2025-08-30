@@ -9,6 +9,7 @@ func _ready() -> void:
 	$CanvasLayer/Easy.focus_mode = Control.FOCUS_NONE
 	$CanvasLayer/medium.focus_mode = Control.FOCUS_NONE
 	$CanvasLayer/hard.focus_mode = Control.FOCUS_NONE
+	$CanvasLayer/normal.focus_mode = Control.FOCUS_NONE
 	$CanvasLayer/Easy.visible = false
 	$CanvasLayer/medium.visible = false
 	$CanvasLayer/hard.visible = false
@@ -46,3 +47,8 @@ func _on_medium_pressed() -> void:
 func _on_hard_pressed() -> void:
 		GlobleSound.play_sound("res://asset/btnSound.mp3")
 		get_tree().change_scene_to_file("res://scenes/main.tscn")
+
+
+func _on_lvl_1_pressed() -> void:
+		GlobleSound.play_sound("res://asset/btnSound.mp3")
+		get_tree().change_scene_to_file("res://scenes/level.tscn")

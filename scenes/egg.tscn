@@ -30,7 +30,6 @@ shape = SubResource("RectangleShape2D_ifgqj")
 texture = ExtResource("2_34461")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
-visible = false
 offset_left = 165.0
 offset_top = -159.0
 offset_right = 323.0
