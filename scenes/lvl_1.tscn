@@ -145,7 +145,7 @@ speed = 1050.0
 
 [node name="player" parent="." instance=ExtResource("5_oymhu")]
 position = Vector2(-305, -258)
-speed = 3000
+speed = 1100
 
 [node name="h-fence" type="TileMap" parent="." groups=["navigation"]]
 tile_set = SubResource("TileSet_dgh7i")
@@ -207,7 +207,6 @@ flat = true
 icon_alignment = 1
 
 [node name="win_interface" parent="CanvasLayer" instance=ExtResource("14_k5cx7")]
-visible = false
 
 [node name="playerHome" type="Marker2D" parent="."]
 position = Vector2(-298, -242)
