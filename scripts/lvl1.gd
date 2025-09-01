@@ -10,6 +10,7 @@ var highest_time := 0.0
 var hold_time := 0.0
 var game_over := false 
 var exit_area = false
+var win = false
 
 func _ready():
 	$CanvasLayer/back.focus_mode = Control.FOCUS_NONE
@@ -31,7 +32,7 @@ func _process(delta: float) -> void:
 	else:
 		eggg.visible = false
 	
-	if game_over:
+	if game_over and not win:
 		$"CanvasLayer/go back".visible = true
 
 func _on_egg_stolen() -> void:
@@ -53,6 +54,8 @@ func _on_back_pressed() -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if is_holding_egg and body.is_in_group("player"):
 		#get_tree().paused = true
+		win = true
+		$CanvasLayer/win_interface.visible = true 
 		$CanvasLayer/win_interface/CanvasLayer/back.visible = true
 		$CanvasLayer/win_interface/CanvasLayer/Label.visible = true
 		$CanvasLayer/win_interface/CanvasLayer/next.visible = true

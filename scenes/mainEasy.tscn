@@ -110,7 +110,7 @@ layer_0/tile_data = PackedInt32Array(-6947060, 131072, 2, -6881524, 131072, 3, -
 position = Vector2(-507, -499)
 speed = 850.0
 
-[node name="player" parent="." groups=["player"] instance=ExtResource("8_65vmk")]
+[node name="player" parent="." instance=ExtResource("8_65vmk")]
 speed = 1100
 
 [node name="chicken_home" type="Marker2D" parent="."]
