@@ -35,6 +35,19 @@ icon = ExtResource("4_klq6b")
 flat = true
 icon_alignment = 1
 
+[node name="lvl2" type="Button" parent="CanvasLayer"]
+offset_left = 275.0
+offset_top = 152.0
+offset_right = 433.0
+offset_bottom = 310.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_2r41h")
+theme_override_font_sizes/font_size = 85
+text = "2"
+icon = ExtResource("4_klq6b")
+flat = true
+icon_alignment = 1
+
 [node name="Normal mode" type="Label" parent="CanvasLayer"]
 anchors_preset = 5
 anchor_left = 0.5
@@ -55,4 +68,5 @@ icon = ExtResource("5_ppgk2")
 flat = true
 
 [connection signal="pressed" from="CanvasLayer/lvl1" to="." method="_on_lvl_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/lvl2" to="." method="_on_lvl_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/back" to="." method="_on_back_pressed"]

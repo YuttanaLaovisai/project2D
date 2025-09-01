@@ -19,6 +19,7 @@ config/icon="uid://c74g4a48rg3ax"
 [autoload]
 
 GlobleSound="*res://scripts/globle_sound.gd"
+Global="*res://scripts/global.gd"
 
 [display]
 

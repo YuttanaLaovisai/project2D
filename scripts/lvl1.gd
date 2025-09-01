@@ -55,6 +55,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if is_holding_egg and body.is_in_group("player"):
 		#get_tree().paused = true
 		win = true
+		Global.unlock_level(2)
 		$CanvasLayer/win_interface.visible = true 
 		$CanvasLayer/win_interface/CanvasLayer/back.visible = true
 		$CanvasLayer/win_interface/CanvasLayer/Label.visible = true

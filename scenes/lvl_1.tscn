@@ -208,6 +208,7 @@ icon_alignment = 1
 [node name="win_interface" parent="CanvasLayer" instance=ExtResource("14_k5cx7")]
 visible = false
 z_index = 1
+lvlPath = "res://scenes/lvl_2.tscn"
 
 [node name="objective" type="Label" parent="CanvasLayer"]
 offset_left = 1295.0

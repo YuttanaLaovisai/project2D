@@ -62,3 +62,4 @@ icon = ExtResource("4_tmsw5")
 flat = true
 
 [connection signal="pressed" from="CanvasLayer/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="CanvasLayer/next" to="." method="_on_next_pressed"]
