@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://3xsov5deie5k"]
+[gd_scene load_steps=6 format=3 uid="uid://3xsov5deie5k"]
 
 [ext_resource type="Script" uid="uid://bea3kaj48p28k" path="res://scripts/win_interface.gd" id="1_i27u1"]
 [ext_resource type="Texture2D" uid="uid://ce08wbwo7wabg" path="res://asset/pixil-frame-0 (24).png" id="1_sq4ju"]
 [ext_resource type="FontFile" uid="uid://cys33ha6e3rft" path="res://font/FantasticBoogaloo-GDlq.ttf" id="3_dvimv"]
+[ext_resource type="Texture2D" uid="uid://ftj0onrtgubb" path="res://asset/New Piskel.png" id="3_tmsw5"]
 [ext_resource type="Texture2D" uid="uid://8tbfs7mvq28q" path="res://asset/pixil-frame-0 (10).png" id="4_tmsw5"]
 
 [node name="win_interface" type="Control"]
@@ -20,6 +21,10 @@ script = ExtResource("1_i27u1")
 z_index = 1
 position = Vector2(969, 514)
 texture = ExtResource("1_sq4ju")
+
+[node name="Pan" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(944, 466)
+texture = ExtResource("3_tmsw5")
 
 [node name="Label" type="Label" parent="CanvasLayer"]
 z_index = 2
