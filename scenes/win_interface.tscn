@@ -23,7 +23,9 @@ position = Vector2(969, 514)
 texture = ExtResource("1_sq4ju")
 
 [node name="Pan" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(944, 466)
+z_index = 1
+position = Vector2(952, 500)
+scale = Vector2(1.87109, 2.05469)
 texture = ExtResource("3_tmsw5")
 
 [node name="Label" type="Label" parent="CanvasLayer"]

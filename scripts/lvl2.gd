@@ -23,6 +23,7 @@ func _ready():
 	$CanvasLayer/win_interface/CanvasLayer/Label.visible = false
 	$CanvasLayer/win_interface/CanvasLayer/next.visible = false
 	$CanvasLayer/win_interface/CanvasLayer/win.visible = false
+	$CanvasLayer/win_interface/CanvasLayer/Pan.visible = false
 
 func _process(delta: float) -> void:
 	if is_holding_egg and not game_over: 
@@ -60,6 +61,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		$CanvasLayer/win_interface/CanvasLayer/Label.visible = true
 		$CanvasLayer/win_interface/CanvasLayer/next.visible = true
 		$CanvasLayer/win_interface/CanvasLayer/win.visible = true
+		$CanvasLayer/win_interface/CanvasLayer/Pan.visible = true
 
 func _on_go_back_pressed() -> void:
 	GlobleSound.play_sound("res://asset/btnSound.mp3")
